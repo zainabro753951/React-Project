@@ -22,10 +22,34 @@ const Experience = () => {
               Exercitation veniam consequat sunt nostrud amet.
             </p>
             <div className="flex gap-3 mt-10">
-              <img className="transition-all duration-500 hover:rotate-[360deg]" src="/img/About/Experience/fig.svg" alt="" />
-              <img className="transition-all duration-500 hover:rotate-[360deg]" src="/img/About/Experience/ps.svg" alt="" />
-              <img className="transition-all duration-500 hover:rotate-[360deg]" src="/img/About/Experience/ai.svg" alt="" />
-              <img className="transition-all duration-500 hover:rotate-[360deg]" src="/img/About/Experience/ae.svg" alt="" />
+              <a href="#">
+                <img
+                  className="transition-all w-[80px] border-t-2 border-l-2 border-r-2 border-[#284059] rounded-full duration-500 hover:rotate-[360deg]"
+                  src="/img/About/Experience/HTML.png"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img
+                  className="transition-all w-[80px] border-t-2 border-l-2 border-r-2 border-[#284059] rounded-full duration-500 hover:rotate-[360deg]"
+                  src="/img/About/Experience/CSS.png"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img
+                  className="transition-all w-[80px] border-t-2 border-l-2 border-r-2 border-[#284059] rounded-full duration-500 hover:rotate-[360deg]"
+                  src="/img/About/Experience/JavaScript.png"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img
+                  className="transition-all w-[80px] border-t-2 border-l-2 border-r-2 border-[#284059] rounded-full duration-500 hover:rotate-[360deg]"
+                  src="/img/About/Experience/Reactjs.png"
+                  alt=""
+                />
+              </a>
             </div>
           </div>
         </div>
