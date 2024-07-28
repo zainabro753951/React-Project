@@ -1,24 +1,31 @@
-import React from 'react'
-import Header from '../Components/Header'
-import Services from './Components/Services'
-import Testimonial from './Components/Testimonial'
-import Skills from './Components/Skills'
-import Projects from './Components/Projects'
-import Clients from './Components/Clients'
-import Footer from '../About/Components/Footer'
+import React, { Suspense, lazy } from "react";
+const Header = lazy(() => import("../Components/Header"));
+const Services = lazy(() => import("./Components/Services"));
+const Skills = lazy(() => import("./Components/Skills"));
+const Projects = lazy(() => import("./Components/Projects"));
+const Footer = lazy(() => import("../About/Components/Footer"));
 
 const Strength = () => {
   return (
     <div>
-        <Header/>
-        <Services/>
-        <Testimonial/> 
-        <Skills/>
-        <Projects/>
-        <Clients/>
-        <Footer/>
+      <Suspense
+        fallback={
+          <div className="w-full h-screen flex justify-center items-center text-5xl font-Barlow not-italic font-bold bg-[#1b1d21] text-white">
+            <img
+              className=" animate-spin w-[500px] h-[200px] object-cover"
+              src="/img/reloader.gif"
+            />
+          </div>
+        }
+      >
+        <Header />
+        <Services />
+        <Skills />
+        <Projects />
+        <Footer />
+      </Suspense>
     </div>
-  )
-}
+  );
+};
 
-export default Strength
+export default Strength;

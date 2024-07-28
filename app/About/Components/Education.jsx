@@ -1,11 +1,45 @@
-import React from "react";
+"use client"
+import React, { useEffect, useRef } from "react";
 import EduCard from "./EduCard";
-
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Education = () => {
+  let Education = useRef(null);
+  let EducationCard = useRef(null);
+  const {contextSafe} = useGSAP()
+  useEffect(contextSafe(() => {
+    gsap.from(Education.current, {
+      x: -400,
+      duration: 2,
+      opacity: 0,
+      ease: "power4",
+      scrollTrigger:  {
+        trigger: Education.current,
+        start: "top 80%",
+        end: "top bottom 20%",
+        toggleActions: "restart none none reverse"
+      }
+    });
+    gsap.from(EducationCard.current, {
+      x: 400,
+      duration: 2,
+      opacity: 0,
+      ease: "power4",
+      scrollTrigger:  {
+        trigger: EducationCard.current,
+        start: "top 80%",
+        end: "top bottom 20%",
+        toggleActions: "restart none none reverse"
+      }
+    });
+  }), [])
+  
   return (
-    <div className="w-full min-h-screen grid xs:grid-cols-1 lg:grid-cols-3 place-content-center lg:pr-10 md:gap-3 lg:gap-16 pl-3 bg-[#101727] text-white not-italic font-Barlow py-24 tracking-wide border-b border-gray-500">
+    <div className="w-full overflow-x-hidden min-h-screen grid xs:grid-cols-1 lg:grid-cols-3 place-content-center lg:pr-10 md:gap-3 lg:gap-16 pl-3 bg-[#101727] text-white not-italic font-Barlow py-24 tracking-wide border-b border-gray-500">
       <div className="flex justify-center items-center py-10">
-        <div className="w-[400px]">
+        <div ref={Education} className="w-[400px]">
           <h1
             id="Edu"
             className="md:text-4xl xs:text-3xl font-semibold relative pb-7 text-center"
@@ -13,13 +47,11 @@ const Education = () => {
             Education
           </h1>
           <p className="md:text-[15px] xs:text-sm tracking-wider font-light">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
+          I am currently pursuing a Software Engineering course at Aptech Center, a comprehensive program designed to equip me with essential skills and knowledge required in the field of software development. The curriculum covers various aspects of software engineering, including programming, system analysis, software design, and project management.
           </p>
         </div>
       </div>
-      <div className="lg:col-span-2 w-full h-full">
+      <div ref={EducationCard} className="lg:col-span-2 w-full h-full">
         <EduCard />
       </div>
     </div>

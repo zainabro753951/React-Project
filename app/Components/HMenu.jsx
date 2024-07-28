@@ -1,14 +1,13 @@
 // MenuIcon.js
+import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import React, { useState } from "react";
 
 const MenuIcon = () => {
   const [isActive, setIsActive] = useState(false);
-
   const toggleMenu = () => {
     setIsActive(!isActive);
   };
-
   return (
     <div>
       <div
@@ -32,16 +31,16 @@ const MenuIcon = () => {
         ></div>
       </div>
       <div
-        className={` fixed transition-all xs:duration-[0.2s] md:duration-[0.5s] top-0 right-0 overflow-hidden backdrop-blur-md bg-black/70 ${
+        className={` fixed transition-all duration-700 w-full h-screen  overflow-hidden backdrop-blur-md bg-black/70 ${
           isActive
-            ? "w-full transition-all duration-700 h-screen"
-            : "w-[0%] h-0"
+            ? "top-0 right-0"
+            : "-top-[100%] -right-[100%]"
         }`}
       >
         <div className={` grid md:grid-cols-2 place-content-center`}>
           <div className="flex flex-col items-center justify-around font-extrabold text-white transition-all duration-300 xs:h-[50vh] md:h-screen xs:text-xl sm:text-3xl md:text-5xl">
             <Link
-              className="transition-all duration-300 hover:text-blue-700"
+              className={`transition-all duration-300 hover:text-blue-700`}
               href="/"
             >
               Home
@@ -77,31 +76,31 @@ const MenuIcon = () => {
                 Follow Me
               </h1>
               <div className="flex gap-5">
-                <a href="#">
+                <a href="https://web.facebook.com/profile.php?id=61554257380915" target="_blank">
                   <img
                     className="md:w-[60px] xs:w-[50px]"
                     src="/img/Headerlinks/fb.svg"
                     alt="Facebook"
                   />
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/in/zain-abro-449399308/" target="_blank">
                   <img
                     className="md:w-[60px] xs:w-[50px]"
                     src="/img/Headerlinks/in.svg"
                     alt="Linkedin"
                   />
                 </a>
-                <a href="#">
+                <a href="https://www.fiverr.com/zain_abro159357?public_mode=true" target="_blank">
                   <img
-                    className="md:w-[60px] xs:w-[50px]"
-                    src="/img/Headerlinks/pi.svg"
+                    className="md:w-[75px] xs:w-[50px] rounded-full"
+                    src="/img/Headerlinks/fiverr.png"
                     alt="Pinterest"
                   />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/zain_abro886/" target="_blank">
                   <img
                     className="md:w-[60px] xs:w-[50px]"
-                    src="/img/Headerlinks/tw.svg"
+                    src="/img/Headerlinks/Instagram.webp"
                     alt=""
                   />
                 </a>

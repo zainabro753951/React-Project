@@ -1,91 +1,153 @@
 "use client";
-import React, { useState } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
-const ContactMe = () => {
-  const [Name, setName] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Subject, setSubject] = useState("");
-  const [Message, setMessage] = useState("");
-  let flashMessage = () => {
-    toast.success('Thank you for your message.', {theme: "dark"});
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+function Contact() {
+  const { contextSafe } = useGSAP();
+  useEffect(
+    contextSafe(() => {
+      gsap.from("#contact1", {
+        x: -400,
+        duration: 2,
+        opacity: 0,
+        ease: "power4",
+        scrollTrigger: {
+          trigger: "#contact1",
+          start: "top 80%",
+          end: "top bottom 20%",
+          toggleActions: "restart none none reverse",
+        },
+      });
+      gsap.from("#input", {
+        y: 100,
+        duration: 1,
+        opacity: 0,
+        ease: "power4",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#input",
+          start: "top 80%",
+          end: "top bottom 20%",
+          toggleActions: "restart none none reverse",
+        },
+      });
+      gsap.from("#input2", {
+        x: 400,
+        opacity: 0,
+        duration: 1,
+        ease: "power4",
+        scrollTrigger: {
+          trigger: "#input2",
+          start: "top 80%",
+          end: "top bottom 20%",
+          toggleActions: "restart none none reverse",
+        },
+      });
+    }),
+    []
+  );
+
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "18216c05-f5dc-43d4-9cbe-913427def211");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+    const message = () => {
+      toast.success("Your form Submitted Successfully", {
+        position: "top-right",
+        theme: "dark",
+      });
+    };
+    const data = await response.json();
+
+    if (data.success) {
+      event.target.reset();
+      message();
+    } else {
+      console.log("Error", data);
+    }
   };
   return (
-    <div className="w-full min-h-[100vh] text-white grid lg:grid-cols-3 gap-4 px-4 place-content-center bg-[#101727] py-28 border-b border-gray-500">
-      <div className="flex flex-col justify-center xs:text-center lg:text-start md:w-1/2 lg:w-full sm:w-10/12 sm:mx-auto">
-        <h1
-          id="Edu"
-          className="md:text-4xl xs:text-3xl font-semibold relative pb-7 text-center"
-        >
-          Contact Us
-        </h1>
+    <div
+      className="grid overflow-x-hidden md:grid-cols-3 font-Barlow 
+    not-italic px-3 gap-3 items-center min-h-screen bg-[#0D1320] text-white"
+    >
+      <div id="contact1">
+        <h1 className="text-3xl font-bold py-4">Contact us</h1>
         <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
+          We value your feedback and inquiries. Whether you have a question, a
+          suggestion, or a project idea, we are here to help. Please fill out
+          the contact form below, and we will get back to you promptly. Your
+          input is important to us, and we look forward to connecting with you!
         </p>
       </div>
-      <div className="col-span-2 grid xs:grid-cols-1 sm:grid-cols-2 gap-4">
-        <form className="w-full h-fit flex flex-col gap-10">
+      <form
+        className="col-span-2 xs:flex flex-col md:grid grid-cols-2 gap-4"
+        onSubmit={onSubmit}
+      >
+        <div className="flex flex-col md:gap-8 xs:gap-4 w-full h-full">
           <input
-            className="w-full border border-gray-600 outline-none transition-all duration-200 focus:border-blue-600 rounded-lg bg-transparent py-3 px-4"
-            type="text"
-            placeholder="Name*"
-            required
-            value={Name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
+            type="hidden"
+            name="access_key"
+            value="18216c05-f5dc-43d4-9cbe-913427def211"
           />
           <input
-            className="w-full border border-gray-600 outline-none transition-all duration-200 focus:border-blue-600 rounded-lg bg-transparent py-3 px-4"
+            id="input"
+            className="w-full py-3 px-4 rounded-lg bg-transparent border border-slate-500 focus:border-blue-800 outline-none"
+            type="text"
+            name="name"
+            placeholder="Enter your Name"
+            required
+          />
+          <input
+            id="input"
+            className="w-full py-3 px-4 rounded-lg bg-transparent border border-slate-500 focus:border-blue-800 outline-none"
             type="email"
-            placeholder="Email*"
+            name="email"
+            placeholder="Enter your Email"
             required
-            value={Email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
           />
           <input
-            className="w-full border border-gray-600 outline-none transition-all duration-200 focus:border-blue-600 rounded-lg bg-transparent py-3 px-4"
+            id="input"
+            className="w-full py-3 px-4 rounded-lg bg-transparent border border-slate-500 focus:border-blue-800 outline-none"
             type="text"
-            placeholder="Subject*"
+            placeholder="Enter your Subject"
+            name="subject"
             required
-            value={Subject}
-            onChange={(e) => {
-              setSubject(e.target.value);
-            }}
           />
-        </form>
-        <div className="w-full xs:h-[20vh] md:h-[41vh]">
+        </div>
+        <div className="w-full h-full">
           <textarea
-            className="w-full overflow-hidden resize-none h-full outline-none bg-transparent border border-gray-600 rounded-lg py-4 px-4 transition-all duration-200 focus:border-blue-600"
-            name="#"
-            id="#"
-            placeholder="Enter a Message*"
+            id="input2"
+            className="w-full h-full rounded-xl outline-none focus:border-blue-800 p-3 bg-transparent border border-slate-500"
+            name="message"
             required
-            value={Message}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
+            placeholder="Enter your Message"
           ></textarea>
         </div>
-        <div className="w-full flex justify-center col-span-2">
-          <button
-           type="submit"
-           name="submit"
-            onClick={flashMessage}
-            className="py-2 px-10 transition-all duration-300 hover:bg-transparent hover:border-[#3EAEFF] hover:tracking-wide bg-[#3EAEFF] border border-transparent rounded-md text-xl"
-          >
-            Submit
-          </button>
-          <ToastContainer/>
-        </div>
-      </div>
+        <button
+          className="py-3 px-6 text-white bg-[#3EAEFF] col-span-2 md:text-xl rounded-lg border-transparent border-2 transition-all duration-300 hover:bg-transparent hover:border-[#3EAEFF] hover:tracking-wide"
+          type="submit"
+        >
+          Submit Form
+        </button>
+        <ToastContainer />
+      </form>
     </div>
   );
-};
+}
 
-export default ContactMe;
+export default Contact;
