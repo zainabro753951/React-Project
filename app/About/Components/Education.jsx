@@ -8,33 +8,36 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Education = () => {
   let Education = useRef(null);
   let EducationCard = useRef(null);
-  const {contextSafe} = useGSAP()
-  useEffect(contextSafe(() => {
-    gsap.from(Education.current, {
-      x: -400,
-      duration: 2,
-      opacity: 0,
-      ease: "power4",
-      scrollTrigger:  {
-        trigger: Education.current,
-        start: "top 80%",
-        end: "top bottom 20%",
-        toggleActions: "restart none none reverse"
-      }
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(Education.current, {
+        x: -400,
+        duration: 2,
+        opacity: 0,
+        ease: "power4",
+        scrollTrigger: {
+          trigger: Education.current,
+          start: "top 80%",
+          end: "top bottom 20%",
+          toggleActions: "restart none none reverse",
+        },
+      });
+      gsap.from(EducationCard.current, {
+        x: 400,
+        duration: 2,
+        opacity: 0,
+        ease: "power4",
+        scrollTrigger: {
+          trigger: EducationCard.current,
+          start: "top 80%",
+          end: "top bottom 20%",
+          toggleActions: "restart none none reverse",
+        },
+      });
     });
-    gsap.from(EducationCard.current, {
-      x: 400,
-      duration: 2,
-      opacity: 0,
-      ease: "power4",
-      scrollTrigger:  {
-        trigger: EducationCard.current,
-        start: "top 80%",
-        end: "top bottom 20%",
-        toggleActions: "restart none none reverse"
-      }
-    });
-  }), [])
+
+    return () => ctx.revert(); // Clean up the context when the component unmounts
+  }, []);
   
   return (
     <div className="w-full overflow-x-hidden min-h-screen grid xs:grid-cols-1 lg:grid-cols-3 place-content-center lg:pr-10 md:gap-3 lg:gap-16 pl-3 bg-[#101727] text-white not-italic font-Barlow py-24 tracking-wide border-b border-gray-500">

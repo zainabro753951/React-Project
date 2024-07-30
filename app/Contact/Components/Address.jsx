@@ -20,15 +20,13 @@ let addressData = [
   },
 ];
 
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 const Address = () => {
-  const { contextSafe } = useGSAP();
-  useEffect(
-    contextSafe(() => {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
       gsap.from(".address", {
         y: -150,
         opacity: 0,
@@ -42,9 +40,10 @@ const Address = () => {
           toggleActions: "restart none none reverse",
         },
       });
-    }),
-    []
-  );
+    });
+
+    return () => ctx.revert(); // Clean up the context when the component unmounts
+  }, []);
 
   return (
     <div className="w-full lg:min-h-[50vh] grid border-b py-28 border-gray-500 md:grid-cols-2 lg:grid-cols-3 place-content-center md:px-16 gap-5 bg-[#0D1320] text-white">

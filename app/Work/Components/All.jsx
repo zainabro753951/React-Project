@@ -4,15 +4,18 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 
 const All = () => {
-  const {contextSafe} = useGSAP()
-  useEffect(contextSafe(() => {
-    gsap.from("#work", {
-      scale: 0,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2
-    })
-  }), [])
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from("#work", {
+        scale: 0,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2
+      });
+    });
+
+    return () => ctx.revert(); // Clean up the context when the component unmounts
+  }, []);
   
   return (
     <>

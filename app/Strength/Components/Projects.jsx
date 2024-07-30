@@ -6,22 +6,25 @@ import Link from 'next/link';
 import React, { useEffect } from "react";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Projects = () => {
-  const {contextSafe} = useGSAP();
-  useEffect(contextSafe(() => {
-    gsap.from("#pro", {
-      y: -150,
-      opacity: 0,
-      duration: 1.5,
-      stagger: 0.1,
-      ease: "power4.inOut",
-      scrollTrigger:  {
-        trigger: "#pro",
-        start: "top 80%",
-        end: "top bottom 20%",
-        toggleActions: "restart none none reverse"
-      }
-    })
-  }), [])
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from("#pro", {
+        y: -150,
+        opacity: 0,
+        duration: 1.5,
+        stagger: 0.1,
+        ease: "power4.inOut",
+        scrollTrigger: {
+          trigger: "#pro",
+          start: "top 80%",
+          end: "top bottom 20%",
+          toggleActions: "restart none none reverse",
+        },
+      });
+    });
+
+    return () => ctx.revert(); // Clean up the context when the component unmounts
+  }, []);
   
   return (
     <div id='slider' className="w-full font-Barlow not-italic flex relative flex-col h-full overflow-hidden bg-[#0D1423] text-white py-16">

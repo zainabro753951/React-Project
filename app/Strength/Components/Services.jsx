@@ -5,16 +5,19 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const Services = () => {
-  const {contextSafe} = useGSAP()
-  useEffect(contextSafe(() => {
-    let tl = gsap.timeline();
-    gsap.from("#service1", {
-      x: -400,
-      duration: 2,
-      opacity: 0,
-      ease: "power4",
-    })
-  }), [])
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      let tl = gsap.timeline();
+      tl.from("#service1", {
+        x: -400,
+        duration: 2,
+        opacity: 0,
+        ease: "power4",
+      });
+    });
+
+    return () => ctx.revert(); // Clean up the context when the component unmounts
+  }, []);
   
   return (
     <div className="w-full font-Barlow not-italic min-h-screen grid lg:grid-cols-3 xs:grid-cols-1 gap-5 bg-[#111727] bg-cover bg-no-repeat bg-center bg-[url(/img/About/Experience/exp_bg.webp)] text-white py-28 borde-gray-500 border-b  px-3">

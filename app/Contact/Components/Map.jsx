@@ -2,18 +2,22 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Map = () => {
-  const {contextSafe} = useGSAP()
-  useEffect(contextSafe(() => {
-    gsap.from("#getintouch", {
-      x: 400,
-      duration: 2,
-      opacity: 0,
-      ease: "power4",
-    })
-  }), [])
+  const getInTouchRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(getInTouchRef.current, {
+        x: 400,
+        duration: 2,
+        opacity: 0,
+        ease: "power4",
+      });
+    });
+
+    return () => ctx.revert(); // Clean up the context when the component unmounts
+  }, []);
   
   const [isLoading, setIsLoading] = useState(true);
 
@@ -40,7 +44,7 @@ const Map = () => {
         </div>
       )}
     </div>
-      <div id="getintouch">
+      <div ref={getInTouchRef}>
         <h1 className="md:text-3xl xs:text-xl font-bold">Get in Touch</h1>
         <p>
         Hi everyone, I'm excited to connect with you all! If you have any questions, need help with a project, need any services from me, want to hire me, or just want to say hi, please don't hesitate to reach out to me. I'm looking forward to hearing from you!

@@ -5,34 +5,37 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Skills = () => {
-  const {contextSafe} = useGSAP()
-  useEffect(contextSafe(() => {
-    gsap.from(".skill", {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      ease: "bounce",
-      stagger: 0.2,
-      scrollTrigger:  {
-        trigger: ".skill",
-        start: "top 80%",
-        end: "top bottom 20%",
-        toggleActions: "restart none none reverse"
-      }
-    })
-    gsap.from("#skill2", {
-      x: 400,
-      opacity: 0,
-      duration: 1,
-      ease: "power4",
-      scrollTrigger:  {
-        trigger: "#skill2",
-        start: "top 80%",
-        end: "top bottom 20%",
-        toggleActions: "restart none none reverse"
-      }
-    })
-  }), [])
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".skill", {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "bounce",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".skill",
+          start: "top 80%",
+          end: "top bottom 20%",
+          toggleActions: "restart none none reverse",
+        },
+      });
+      gsap.from("#skill2", {
+        x: 400,
+        opacity: 0,
+        duration: 1,
+        ease: "power4",
+        scrollTrigger: {
+          trigger: "#skill2",
+          start: "top 80%",
+          end: "top bottom 20%",
+          toggleActions: "restart none none reverse",
+        },
+      });
+    });
+
+    return () => ctx.revert(); // Clean up the context when the component unmounts
+  }, []);
   
   return (
     <div className="w-full overflow-x-hidden font-Barlow not-italic min-h-[100vh] lg:grid xs:flex flex-col-reverse lg:grid-cols-3 gap-5 bg-[#0F182B] border-t border-gray-500 text-white place-content-center">

@@ -8,9 +8,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 function Contact() {
-  const { contextSafe } = useGSAP();
-  useEffect(
-    contextSafe(() => {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
       gsap.from("#contact1", {
         x: -400,
         duration: 2,
@@ -48,9 +47,11 @@ function Contact() {
           toggleActions: "restart none none reverse",
         },
       });
-    }),
-    []
-  );
+    });
+
+    return () => ctx.revert(); // Clean up the context when the component unmounts
+  }, []);
+
 
   const [result, setResult] = React.useState("");
 
@@ -71,13 +72,19 @@ function Contact() {
         theme: "dark",
       });
     };
+    const message2 = () => {
+      toast.warning("Your form can not submited due to some errors or your network issue", {
+        position: "top-right",
+        theme: "dark",
+      });
+    }
     const data = await response.json();
 
     if (data.success) {
       event.target.reset();
       message();
     } else {
-      console.log("Error", data);
+      message2();
     }
   };
   return (

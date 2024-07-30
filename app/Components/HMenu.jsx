@@ -1,17 +1,19 @@
 // MenuIcon.js
-import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import React, { useState } from "react";
 
 const MenuIcon = () => {
   const [isActive, setIsActive] = useState(false);
+
   const toggleMenu = () => {
     setIsActive(!isActive);
   };
+
   return (
     <div>
+      {/* Menu Icon */}
       <div
-        className="flex flex-col fixed right-6 z-50 justify-between md:w-8 md:h-6 xs:w-6 xs:h-5 cursor-pointer"
+        className="fixed right-6 z-50 flex flex-col justify-between md:w-8 md:h-6 xs:w-6 xs:h-5 cursor-pointer"
         onClick={toggleMenu}
       >
         <div
@@ -30,43 +32,28 @@ const MenuIcon = () => {
           }`}
         ></div>
       </div>
+
+      {/* Mobile Menu */}
       <div
-        className={` fixed transition-all duration-700 w-full h-screen  overflow-hidden backdrop-blur-md bg-black/70 ${
-          isActive
-            ? "top-0 right-0"
-            : "-top-[100%] -right-[100%]"
+        className={`fixed w-full h-screen bg-black/70 backdrop-blur-md overflow-hidden transition-all duration-700 ${
+          isActive ? "top-0 right-0" : "-top-[100%] -right-[100%]"
         }`}
       >
-        <div className={` grid md:grid-cols-2 place-content-center`}>
+        <div className="grid md:grid-cols-2 place-content-center">
           <div className="flex flex-col items-center justify-around font-extrabold text-white transition-all duration-300 xs:h-[50vh] md:h-screen xs:text-xl sm:text-3xl md:text-5xl">
-            <Link
-              className={`transition-all duration-300 hover:text-blue-700`}
-              href="/"
-            >
+            <Link href="/" className="transition-all duration-300 hover:text-blue-700">
               Home
             </Link>
-            <Link
-              className="transition-all duration-300 hover:text-blue-700"
-              href="/About"
-            >
+            <Link href="/About" className="transition-all duration-300 hover:text-blue-700">
               About
             </Link>
-            <Link
-              className="transition-all duration-300 hover:text-blue-700"
-              href="/Work"
-            >
+            <Link href="/Work" className="transition-all duration-300 hover:text-blue-700">
               My Work
             </Link>
-            <Link
-              className="transition-all duration-300 hover:text-blue-700"
-              href="/Strength"
-            >
+            <Link href="/Strength" className="transition-all duration-300 hover:text-blue-700">
               Strength
             </Link>
-            <Link
-              className="transition-all duration-300 hover:text-blue-700"
-              href="/Contact"
-            >
+            <Link href="/Contact" className="transition-all duration-300 hover:text-blue-700">
               Contact
             </Link>
           </div>
@@ -76,32 +63,32 @@ const MenuIcon = () => {
                 Follow Me
               </h1>
               <div className="flex gap-5">
-                <a href="https://web.facebook.com/profile.php?id=61554257380915" target="_blank">
+                <a href="https://web.facebook.com/profile.php?id=61554257380915" target="_blank" rel="noopener noreferrer">
                   <img
                     className="md:w-[60px] xs:w-[50px]"
                     src="/img/Headerlinks/fb.svg"
                     alt="Facebook"
                   />
                 </a>
-                <a href="https://www.linkedin.com/in/zain-abro-449399308/" target="_blank">
+                <a href="https://www.linkedin.com/in/zain-abro-449399308/" target="_blank" rel="noopener noreferrer">
                   <img
                     className="md:w-[60px] xs:w-[50px]"
                     src="/img/Headerlinks/in.svg"
                     alt="Linkedin"
                   />
                 </a>
-                <a href="https://www.fiverr.com/zain_abro159357?public_mode=true" target="_blank">
+                <a href="https://www.fiverr.com/zain_abro159357?public_mode=true" target="_blank" rel="noopener noreferrer">
                   <img
                     className="md:w-[75px] xs:w-[50px] rounded-full"
                     src="/img/Headerlinks/fiverr.png"
-                    alt="Pinterest"
+                    alt="Fiverr"
                   />
                 </a>
-                <a href="https://www.instagram.com/zain_abro886/" target="_blank">
+                <a href="https://www.instagram.com/zain_abro886/" target="_blank" rel="noopener noreferrer">
                   <img
                     className="md:w-[60px] xs:w-[50px]"
                     src="/img/Headerlinks/Instagram.webp"
-                    alt=""
+                    alt="Instagram"
                   />
                 </a>
               </div>

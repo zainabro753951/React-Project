@@ -3,31 +3,35 @@ import React, { useEffect } from "react";
 import TypedComponent from "./TypedComponent";
 import Link from "next/link";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 const Hero = () => {
-  gsap.registerPlugin(useGSAP) 
-  const {contextSafe} = useGSAP();
-  useEffect(contextSafe(() => {
-    let tl = gsap.timeline();
-    gsap.from("#img-bg", {
-      x: -400,
-      duration: 2,
-      opacity: 0,
-      ease: "power4",
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      let tl = gsap.timeline();
+      
+      gsap.from("#img-bg", {
+        x: -400,
+        duration: 2,
+        opacity: 0,
+        ease: "power4",
+      });
+
+      tl.from("#hero", {
+        x: 400,
+        duration: 2,
+        opacity: 0,
+        ease: "power4",
+      });
+
+      tl.from("#front-letter", {
+        rotateX: 360,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.1,
+      });
     });
-    tl.from("#hero", {
-      x: 400,
-      duration: 2,
-      opacity: 0,
-      ease: "power4",
-    })
-    tl.from("#front-letter", {
-      rotateX: 360,
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.1,
-    });
-  }), [])
+
+    return () => ctx.revert(); // Clean up the context when the component unmounts
+  }, []);
   
   let heroFront = "FrontendDeveloper";
   return (

@@ -32,18 +32,18 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useEffect } from "react";
 const Projectdashboard = () => {
-  const { contextSafe } = useGSAP();
-  useEffect(
-    contextSafe(() => {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
       gsap.from("#work", {
         scale: 0,
         opacity: 0,
         duration: 1,
-        stagger: 0.2,
+        stagger: 0.2
       });
-    }),
-    []
-  );
+    });
+
+    return () => ctx.revert(); // Clean up the context when the component unmounts
+  }, []);
 
   return (
     <>

@@ -3,11 +3,9 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import { FaStar } from "react-icons/fa6";
 const AboutHero = () => {
-  const { contextSafe } = useGSAP();
-  useEffect(
-    contextSafe(() => {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
       let tl = gsap.timeline();
       gsap.from("#about-imgs", {
         x: -400,
@@ -27,10 +25,10 @@ const AboutHero = () => {
         duration: 0.5,
         ease: "power4",
       });
-    }),
-    []
-  );
+    });
 
+    return () => ctx.revert(); // Clean up the context when the component unmounts
+  }, []);
   return (
     <div
       id="about"
