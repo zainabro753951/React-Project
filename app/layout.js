@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html className="scroll-smooth" lang="en">
+    <html className="scroll-smooth max-w-[1200px]" lang="en">
       <head>
         <meta
           name="viewport"
