@@ -5,7 +5,7 @@ export const metadata = {
   
   export default function RootLayout({ children }) {
     return (
-      <html className="scroll-smooth font-Barlow 2xl:text-2xl not-italic" lang="en">
+      <html className="scroll-smooth font-Barlow not-italic" lang="en">
         <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
