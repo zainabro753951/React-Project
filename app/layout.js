@@ -1,3 +1,5 @@
+/** @format */
+
 import "./globals.css";
 
 export const metadata = {
@@ -10,15 +12,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html className="scroll-smooth max-w-[1200px]" lang="en">
+    <html className='scroll-smooth' lang='en'>
       <head>
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name='viewport'
+          content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
         />
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          name='viewport'
+          content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
         />
       </head>
       <body>{children}</body>

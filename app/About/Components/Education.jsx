@@ -1,4 +1,6 @@
-"use client"
+/** @format */
+
+"use client";
 import React, { useEffect, useRef } from "react";
 import EduCard from "./EduCard";
 import gsap from "gsap";
@@ -38,24 +40,30 @@ const Education = () => {
 
     return () => ctx.revert(); // Clean up the context when the component unmounts
   }, []);
-  
+
   return (
-    <div className="w-full overflow-x-hidden min-h-screen grid xs:grid-cols-1 lg:grid-cols-3 place-content-center lg:pr-10 md:gap-3 lg:gap-16 pl-3 bg-[#101727] text-white not-italic font-Barlow py-24 tracking-wide border-b border-gray-500">
-      <div className="flex justify-center items-center py-10">
-        <div ref={Education} className="w-[400px]">
-          <h1
-            id="Edu"
-            className="md:text-4xl xs:text-3xl font-semibold relative pb-7 text-center"
-          >
-            Education
-          </h1>
-          <p className="md:text-[15px] xs:text-sm tracking-wider font-light">
-          I am currently pursuing a Software Engineering course at Aptech Center, a comprehensive program designed to equip me with essential skills and knowledge required in the field of software development. The curriculum covers various aspects of software engineering, including programming, system analysis, software design, and project management.
-          </p>
+    <div className='w-full bg-[#101727] overflow-x-hidden border-b border-gray-500'>
+      <div className='mx-auto max-w-[1600px] h-full grid xs:grid-cols-1 lg:grid-cols-3 place-content-center lg:pr-10 md:gap-3 lg:gap-16 pl-3  text-white not-italic font-Barlow py-24 tracking-wide '>
+        <div className='flex justify-center items-center py-10'>
+          <div ref={Education} className='w-[400px]'>
+            <h1
+              id='Edu'
+              className='md:text-4xl xs:text-3xl font-semibold relative pb-7 text-center'>
+              Education
+            </h1>
+            <p className='md:text-[15px] xs:text-sm tracking-wider font-light'>
+              I am currently pursuing a Software Engineering course at Aptech
+              Center, a comprehensive program designed to equip me with
+              essential skills and knowledge required in the field of software
+              development. The curriculum covers various aspects of software
+              engineering, including programming, system analysis, software
+              design, and project management.
+            </p>
+          </div>
         </div>
-      </div>
-      <div ref={EducationCard} className="lg:col-span-2 w-full h-full">
-        <EduCard />
+        <div ref={EducationCard} className='lg:col-span-2 w-full h-full'>
+          <EduCard />
+        </div>
       </div>
     </div>
   );
