@@ -45,27 +45,27 @@ const Hero = () => {
           id='img-bg'
           className='bg-[#18C6DA] xs:overflow-hidden md:overflow-visible relative rounded-[120px] w-full xs:h-fit md:h-[100vh] lg:h-[120vh]'>
           <img
-            className='md:absolute scale-110 mx-auto w-full z-40 -top-48'
+            className='md:absolute scale-125 mx-auto w-full z-40 -top-32'
             src='/img/HeroSelf/Zain.png'
-            alt=''
+            alt='Zain Abro img'
           />
           <img
             id='self'
             className='md:absolute xs:hidden md:block -top-60 -right-32'
             src='/img/HeroSelf/tool1`.png'
-            alt=''
+            alt='img'
           />
           <img
             id='self'
             className='md:absolute xs:hidden md:block bottom-16 -left-10'
             src='/img/HeroSelf/tool2.png'
-            alt=''
+            alt='img'
           />
           <img
             id='self'
             className='md:absolute xs:hidden md:block top-[150px] left-[400px]'
             src='/img/HeroSelf/tool3.png'
-            alt=''
+            alt='img'
           />
         </div>
         <div

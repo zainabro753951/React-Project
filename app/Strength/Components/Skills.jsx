@@ -50,7 +50,7 @@ const Skills = () => {
               <img
                 className='w-[120px]'
                 src='/img/About/Experience/HTML.png'
-                alt=''
+                alt='HTML logo'
               />
             </div>
             <div className='w-full my-4 relative z-40'>
@@ -72,7 +72,7 @@ const Skills = () => {
               <img
                 className='w-[120px]'
                 src='/img/About/Experience/CSS.png'
-                alt=''
+                alt='CSS logo'
               />
             </div>
             <div className='w-full my-4 relative z-40'>
@@ -94,7 +94,7 @@ const Skills = () => {
               <img
                 className='w-[120px]'
                 src='/img/About/Experience/JavaScript.png'
-                alt=''
+                alt='JavaScript logo'
               />
             </div>
             <div className='w-full my-4 relative z-40'>
@@ -116,7 +116,7 @@ const Skills = () => {
               <img
                 className='w-[120px]'
                 src='/img/About/Experience/Reactjs.png'
-                alt=''
+                alt='React js logo'
               />
             </div>
             <div className='w-full my-4 relative z-40'>
@@ -128,6 +128,50 @@ const Skills = () => {
               </div>
               <div
                 id='feel4'
+                className='w-[100%] relative rounded-full bg-gray-600 h-1'></div>
+            </div>
+          </div>
+          <div
+            id='EduCard'
+            className='skill w-full relative py-2 flex gap-5 border border-gray-500 px-3 rounded-lg'>
+            <div className='relative z-40 w-[120px] bg-Skills rounded-full border-[0.5px] border-[#274876] flex items-center justify-center'>
+              <img
+                className='w-[65px]'
+                src='/img/About/Experience/github.png'
+                alt='HTML logo'
+              />
+            </div>
+            <div className='w-full my-4 relative z-40'>
+              <div className='flex mb-5 justify-between items-center w-full'>
+                <h1 className='text-xl font-semibold'>GitHub</h1>
+                <h1 className='px-3 border border-gray-500 rounded-full'>
+                  80%
+                </h1>
+              </div>
+              <div
+                id='feel1'
+                className='w-[100%] relative rounded-full bg-gray-600 h-1'></div>
+            </div>
+          </div>
+          <div
+            id='EduCard'
+            className='skill w-full relative py-2 flex gap-5 border border-gray-500 px-3 rounded-lg'>
+            <div className='relative z-40 w-[120px] bg-Skills rounded-full border-[0.5px] border-[#274876] flex items-center justify-center'>
+              <img
+                className='w-[65px]'
+                src='/img/About/Experience/gsap.png'
+                alt='HTML logo'
+              />
+            </div>
+            <div className='w-full my-4 relative z-40'>
+              <div className='flex mb-5 justify-between items-center w-full'>
+                <h1 className='text-xl font-semibold'>Gsap</h1>
+                <h1 className='px-3 border border-gray-500 rounded-full'>
+                  75%
+                </h1>
+              </div>
+              <div
+                id='feel6'
                 className='w-[100%] relative rounded-full bg-gray-600 h-1'></div>
             </div>
           </div>

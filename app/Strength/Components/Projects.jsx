@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import React, { useEffect } from "react";
+import Projecttimer from "./Projecttimer";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Projects = () => {
   useEffect(() => {
@@ -27,7 +28,9 @@ const Projects = () => {
 
     return () => ctx.revert(); // Clean up the context when the component unmounts
   }, []);
-
+  const project1 = "2024-07-01T12:00:00";
+  const project2 = "2024-07-19T12:00:00";
+  const project3 = "2024-07-10T12:00:00";
   return (
     <div className='w-full bg-[#0D1423]'>
       <div
@@ -52,13 +55,13 @@ const Projects = () => {
               <img
                 className='md:w-[95%] rounded-lg md:relative z-40 h-full mx-auto'
                 src='/img/My Work/Gatsby.jpg'
-                alt=''
+                alt='Gatsby Clone project img'
               />
             </div>
             <div className='bg-ServiceCard pb-2 rounded-lg w-full md:h-[25vh] flex flex-col justify-end md:relative -top-16'>
               <div className='flex w-full justify-between px-4 text-sm py-1'>
                 <h1>Web Development</h1>
-                <h1>15 days ago</h1>
+                <Projecttimer uploadDate={project1} />
               </div>
               <h1 className='px-4'>Developed by React.js </h1>
             </div>
@@ -67,14 +70,14 @@ const Projects = () => {
             <div>
               <img
                 className='md:w-[95%] /img/My Work/Gatsby.jpg md:relative rounded-lg z-40 h-full mx-auto'
-                src='/img/My Work/Shopo.jpg'
-                alt=''
+                src='/img/My Work/protect harvest.png'
+                alt='Shopo website project img'
               />
             </div>
             <div className='bg-ServiceCard pb-2 rounded-lg w-full md:h-[25vh] flex flex-col justify-end md:relative -top-16'>
               <div className='flex w-full justify-between px-4 text-sm py-1'>
                 <h1>Web Development</h1>
-                <h1>1 Month Ago</h1>
+                <Projecttimer uploadDate={project2} />
               </div>
               <h1 className='px-4'>Best Wireframe Tools For Web Designers. </h1>
             </div>
@@ -84,13 +87,13 @@ const Projects = () => {
               <img
                 className='md:w-[95%] md:relative rounded-lg z-40 h-full mx-auto'
                 src='/img/My Work/Edusty.jpg'
-                alt=''
+                alt='Edusty website project img'
               />
             </div>
             <div className='bg-ServiceCard pb-2 rounded-lg w-full md:h-[25vh] flex flex-col justify-end md:relative -top-16'>
               <div className='flex w-full justify-between px-4 text-sm py-1'>
                 <h1>Web Development</h1>
-                <h1>2 Month Ago</h1>
+                <Projecttimer uploadDate={project3} />
               </div>
               <h1 className='px-4'>Developed by React.js and Tailwind css </h1>
             </div>

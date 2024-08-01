@@ -39,10 +39,22 @@ const AboutHero = () => {
         <div
           id='about-imgs'
           className='md:relative w-full h-full z-[41] md:block'>
-          <div className='flex w-full overflow-hidden h-full bg-[#3EAEFF] justify-center items-center rounded-xl'>
+          <div className='flex relative w-full overflow-hidden h-full bg-[#3EAEFF] justify-center items-center rounded-xl'>
             <img
-              className='w-full scale-110 object-cover h-full'
+              className='w-full z-20 lg:absolute scale-125 transition-all duration-500 hover:scale-100 object-cover object-bottom h-full'
               src='/img/About/Me.png'
+              alt='Zain Abro Img'
+            />
+            <img
+              id='self'
+              className='left-20 absolute md:block xs:hidden'
+              src='/img/HeroSelf/tool2.png'
+              alt=''
+            />
+            <img
+              id='self'
+              className='left-48 top-20 absolute md:block xs:hidden'
+              src='/img/HeroSelf/tool3.png'
               alt=''
             />
           </div>
@@ -85,7 +97,8 @@ const AboutHero = () => {
           <div className='flex justify-center gap-4'>
             <a
               className='py-2 md:px-6 xs:px-3 md:text-lg xs:text-lg bg-[#F64142] border border-transparent transition-all duration-300 hover:bg-transparent hover:border hover:border-[#F64142] hover:text-[#F64142] hover:tracking-wide rounded-lg'
-              href='#'>
+              href='/CV/Zain Abro Resume.pdf'
+              target='_blank'>
               Download Resume
             </a>
             <Link

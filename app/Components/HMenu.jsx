@@ -77,7 +77,7 @@ const MenuIcon = () => {
                   <img
                     className='md:w-[60px] xs:w-[50px]'
                     src='/img/Headerlinks/fb.svg'
-                    alt='Facebook'
+                    alt='Facebook icon'
                   />
                 </a>
                 <a
@@ -87,17 +87,17 @@ const MenuIcon = () => {
                   <img
                     className='md:w-[60px] xs:w-[50px]'
                     src='/img/Headerlinks/in.svg'
-                    alt='Linkedin'
+                    alt='Linkedin icon'
                   />
                 </a>
                 <a
-                  href='https://www.fiverr.com/zain_abro159357?public_mode=true'
+                  href='https://github.com/zainabro753951'
                   target='_blank'
                   rel='noopener noreferrer'>
                   <img
-                    className='md:w-[75px] xs:w-[50px] rounded-full'
-                    src='/img/Headerlinks/fiverr.png'
-                    alt='Fiverr'
+                    className='md:w-[60px] xs:w-[50px] rounded-full'
+                    src='/img/About/Experience/github2.jpg'
+                    alt='GitHub Icon'
                   />
                 </a>
                 <a
@@ -107,7 +107,7 @@ const MenuIcon = () => {
                   <img
                     className='md:w-[60px] xs:w-[50px]'
                     src='/img/Headerlinks/Instagram.webp'
-                    alt='Instagram'
+                    alt='Instagram icon'
                   />
                 </a>
               </div>
