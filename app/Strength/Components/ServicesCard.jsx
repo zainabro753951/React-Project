@@ -6,7 +6,7 @@ let serviceCardData = [
     alt: "Website developer img",
     name: "Website Developer",
     discription:
-      "I'm an expert web developer proficient in HTML, CSS, Tailwind CSS, and Bootstrap. I also have expertise in JavaScript and the React library, which enables me to create impressive UI and UX designs for websites. I believe that without a good UX, our website can't gain popularity and our business can't grow. I've completed numerous projects, whose links I've shared on my portfolio's My Work page, which you can visit to explore. I write highly efficient and optimized code for my websites.",
+      "I provide comprehensive web development services to help you establish a strong online presence. My website development service covers everything from conceptual design to final deployment, ensuring a seamless experience for your users. Whether you need a simple website or a robust eCommerce platform, I’m here to deliver tailored solutions that meet your specific needs.",
   },
   {
     img: "/img/Strength/Services/card2.svg",

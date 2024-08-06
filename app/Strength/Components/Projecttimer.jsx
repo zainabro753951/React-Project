@@ -12,6 +12,10 @@ const Projecttimer = ({ uploadDate }) => {
       const now = new Date();
       const timeDifference = now - new Date(uploadDate);
 
+      const years = Math.floor(
+        timeDifference / (1000 * 60 * 60 * 24 * 30.44 * 12)
+      );
+      const months = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 30.44));
       const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
         (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -19,9 +23,17 @@ const Projecttimer = ({ uploadDate }) => {
       const minutes = Math.floor(
         (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
       );
-      const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-      return `${days} days ago`;
+      if (minutes <= 60) {
+        return `${minutes} minutes ago`;
+      } else if (hours <= 60) {
+        return `${hours} hours ago`;
+      } else if (days <= 30.44) {
+        return `${days} days ago`;
+      } else if (months <= 12) {
+        return `${months} months ago`;
+      } else {
+        return `${years} years ago`;
+      }
     };
 
     const updateTimer = () => {

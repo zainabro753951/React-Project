@@ -26,6 +26,7 @@ module.exports = {
         ProBtn:
           "radial-gradient(circle, rgba(255,138,203,1) 0%, rgba(138,255,148,1) 96%, rgba(27,255,0,1) 100%)",
         Skills: "linear-gradient(to top, #1c232f, #143c41)",
+        Blog: "linear-gradient(to right, #135380, #135380da, #3eafff00)",
       },
       screens: {
         xs: "258px",

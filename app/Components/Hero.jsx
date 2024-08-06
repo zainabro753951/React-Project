@@ -107,28 +107,18 @@ const Hero = () => {
               Frontend Developer Mobile Responsive Websites
             </h1>
             <p className='text-gray-200 md:text-md xs:text-sm font-Barlow not-italic'>
-              As a dedicated frontend developer, I specialize in creating
-              captivating and mobile responsive websites that blend cutting-edge
-              design with seamless functionality. With Expertise HTML, CSS,
-              Tailwind CSS, JavaScript, React.js, and Gsap the popular liberary
-              of animations.
-              <br />
-              <strong>HTML and CSS:</strong> Proficient in crafting
-              pixel-perfect layouts using HTML5 and CSS3, ensuring compatibility
-              across all devices and browsers.
-              <br />
-              <strong>Tailwind CSS Expertise:</strong> Harnessing the power of
-              Tailwind CSS, I streamline development workflows to deliver
-              responsive and visually stunning interfaces efficiently.
-              <br />
-              <strong>JavaScript Proficiency:</strong> Leveraging ES6+ standards
-              and libraries like React.js, I enhance user experiences with
-              dynamic and interactive elements, optimizing performance for
-              mobile devices.
-              <br />
-              <strong>GSAP Animation Skills:</strong> I bring websites to life
-              with fluid animations and smooth transitions using GSAP, elevating
-              user engagement and interface interactivity.
+              As a frontend developer, I specialize in creating dynamic and
+              visually appealing web applications using a robust skill set.
+              Proficient in HTML, CSS, and JavaScript, I leverage these
+              foundational technologies to build responsive layouts that enhance
+              user experience. My expertise extends to modern frameworks such as
+              React.js, which enables me to develop scalable and efficient
+              interfaces. Additionally, I utilize Tailwind CSS for streamlined
+              styling and GSAP for advanced animation techniques, ensuring that
+              my projects are not only functional but also engaging. Committed
+              to staying updated with the latest trends in web development, I
+              strive to deliver high-quality, performant web solutions that meet
+              both client and user needs.
             </p>
           </div>
         </div>

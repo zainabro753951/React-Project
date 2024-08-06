@@ -34,14 +34,14 @@ const Services = () => {
               What I Do
             </h1>
             <p className='text-gray-400'>
-              I am a passionate and skilled Frontend Developer with a strong
-              foundation in HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and
-              React.js. With a keen eye for detail and a commitment to
-              delivering high-quality web applications, I specialize in creating
-              responsive, user-friendly, and visually appealing websites. My
-              expertise extends to implementing dynamic and interactive features
-              that enhance user experience, using tools like GSAP for smooth
-              animations.
+              As a Frontend Developer and Freelance Web Developer, I create
+              engaging websites that meet your business needs. With skills in
+              HTML, CSS, JavaScript, Tailwind CSS, GSAP, and React.js, I offer
+              dynamic website design services tailored for modern users. If
+              you’re looking for website developers near me, I'm here to help
+              you build a responsive and visually appealing website at an
+              affordable website design cost. I also specialize as a Shopify Web
+              Developer, crafting eCommerce solutions that drive sales.
             </p>
             <img className='mt-10' src='/img/Strength/do_img.webp' alt='' />
           </div>

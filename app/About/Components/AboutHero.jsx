@@ -97,7 +97,7 @@ const AboutHero = () => {
           <div className='flex justify-center gap-4'>
             <a
               className='py-2 md:px-6 xs:px-3 md:text-lg xs:text-lg bg-[#F64142] border border-transparent transition-all duration-300 hover:bg-transparent hover:border hover:border-[#F64142] hover:text-[#F64142] hover:tracking-wide rounded-lg'
-              href='/CV/Zain Abro Resume.pdf'
+              href='/CV/Zain Abro CV.pdf'
               target='_blank'>
               Download Resume
             </a>

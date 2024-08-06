@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html className='scroll-smooth' lang='en'>
+    <html className='scroll-smooth font-Barlow not-italic' lang='en'>
       <head>
         <meta
           name='viewport'
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         />
         <link className=' scale-125' rel='icon' href='/img/ZainAbro.png' />
       </head>
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
