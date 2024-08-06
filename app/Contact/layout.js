@@ -4,7 +4,7 @@ export const metadata = {
   title:
     "Contact Me | Get in Touch for Frontend Development Inquiries and Collaborations",
   description:
-    "Reach out to me for frontend development inquiries, collaborations, or project discussions. Find my contact details, including addresses and a convenient contact form, to easily get in touch and start a conversation about how we can work together.",
+    "Get in touch with Zain Abro, a frontend developer and web designer. Use the contact form to discuss projects, freelance opportunities, or web development inquiries. Quick and easy communication for potential collaborations.",
 };
 
 export default function RootLayout({ children }) {
@@ -18,18 +18,14 @@ export default function RootLayout({ children }) {
         <meta charSet='UTF-8' />
         <meta
           property='og:title'
-          content='Contact Me | Get in Touch for Frontend Development Inquiries and Collaborations '
+          content='Contact me Zain Abro | Frontend Development & Web Design Inquiries'
         />
         <meta
           property='og:description'
-          content='Reach out to me for frontend development inquiries, collaborations, or project discussions. Find my contact details, including addresses and a convenient contact form, to easily get in touch and start a conversation about how we can work together.'
-        />
-        <meta
-          property='og:url'
-          content='https://graceful-ganache-f860cd.netlify.app/Contact'
+          content='Reach out to [Zain Abro for frontend development and web design services. Use the contact form to inquire about project collaborations, freelance opportunities, or any questions related to web development.'
         />
       </head>
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

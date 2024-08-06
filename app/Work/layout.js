@@ -1,10 +1,9 @@
 /** @format */
 
 export const metadata = {
-  title:
-    "My Work | Showcasing Projects Built with React.js, HTML, CSS, and JavaScript Tailwind css other",
+  title: "My Work | Frontend Developer Projects & Portfolio | Zain Abro",
   description:
-    "Explore my portfolio of projects developed using React.js, HTML, CSS, and JavaScript. From interactive web applications to visually appealing websites, see how my expertise in frontend technologies delivers innovative solutions and exceptional user experiences.",
+    "Explore Zain Abro's portfolio showcasing a diverse range of frontend development projects. View detailed work examples in HTML, CSS, JavaScript, React.js, and Tailwind CSS. Discover innovative web design solutions and code samples.",
 };
 
 export default function RootLayout({ children }) {
@@ -17,19 +16,19 @@ export default function RootLayout({ children }) {
         />
         <meta charSet='UTF-8' />
         <meta
+          name='description'
+          content='A portfolio showcasing my work in web development.'
+        />
+        <meta
           property='og:title'
-          content='My Work | Showcasing Projects Built with React.js, HTML, CSS, and JavaScript '
+          content="Frontend Developer Projects | Zain Abro's Work Portfolio"
         />
         <meta
           property='og:description'
-          content='Explore my portfolio of projects developed using React.js, HTML, CSS, and JavaScript. From interactive web applications to visually appealing websites, see how my expertise in frontend technologies delivers innovative solutions and exceptional user experiences.'
-        />
-        <meta
-          property='og:url'
-          content='https://graceful-ganache-f860cd.netlify.app/Work'
+          content="Check out Zain Abro's work portfolio featuring frontend development projects. From HTML and CSS to JavaScript and React.js, explore a collection of professional web design and development work that highlights technical skills and creativity."
         />
       </head>
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

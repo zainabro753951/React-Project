@@ -4,11 +4,9 @@ import "./globals.css";
 
 export const metadata = {
   title:
-    "Frontend Developer Portfolio | | Zain Abro Expert in React.js, Tailwind CSS, and Responsive Web Design",
+    "Web Developer Portfolio | Zain Abro - Creatively Designed Projects & Services",
   description:
-    "Explore my portfolio as a Frontend Developer, showcasing expertise in HTML, CSS, JavaScript, React.js, Next.js and creative animations using Gsap. Discover responsive web design and stunning user interfaces. Let's create exceptional digital experiences together.",
-  keywords:
-    "Frontend development, Zain abro portfolio website, React portfolio website, Porfolio website for web developer, Portfolio website design, HTML, CSS, Tailwind CSS, JavaScript, React.js, GSAP animations, portfolio website, Frontend developer Languages,HTML, CSS, Tailwind CSS, JavaScript, ES6, React.js, GSAP, frontend development, web developer portfolio, responsive design, user interface design, web animations, website development, freelance developer, portfolio showcase, creative web solutions, modern web design, UI/UX design, cross-browser compatibility, mobile-friendly design, interactive websites, clean code practices, GitHub projects, client testimonials, professional web developer, software engineer, custom web applications, digital portfolio, online portfolio",
+    "Explore the impressive portfolio of Zain Abro, a skilled web developer. Discover innovative projects, professional services, and expertise in modern web technologies like React, JavaScript, and more. Let's create something amazing together!",
 };
 
 export default function RootLayout({ children }) {
@@ -23,7 +21,22 @@ export default function RootLayout({ children }) {
           name='viewport'
           content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
         />
-        <link className=' scale-125' rel='icon' href='/img/ZainAbro.png' />
+        <meta property='og:title' content='My Portfolio' />
+        <meta
+          name='keywords'
+          content='Web Developer, React Developer, Frontend Development, JavaScript Projects, Creative Solutions'></meta>
+        <meta
+          property='og:title'
+          content='Web Developer Portfolio | Zain Abro - Creative Solutions'
+        />
+        <meta
+          property='og:description'
+          content='Discover the portfolio of Zain Abro, a talented web developer specializing in React and modern web technologies. Check out innovative projects and professional services that bring ideas to life.'
+        />
+        <meta property='og:image' content='img/og img/ZainAbro.png' />
+        <meta property='og:url' content='https://zainabro.netlify.app/' />
+        <meta property='og:type' content='website' />
+        <link rel='icon' href='/img/ZainAbro.png' />
       </head>
       <body suppressHydrationWarning>{children}</body>
     </html>
