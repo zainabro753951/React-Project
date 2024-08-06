@@ -3,6 +3,7 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 const AboutHero = () => {
@@ -40,22 +41,28 @@ const AboutHero = () => {
           id='about-imgs'
           className='md:relative w-full h-full z-[41] md:block'>
           <div className='flex relative w-full overflow-hidden h-full bg-[#3EAEFF] justify-center items-center rounded-xl'>
-            <img
+            <Image
               className='w-full z-20 lg:absolute scale-125 transition-all duration-500 hover:scale-100 object-cover object-bottom h-full'
               src='/img/About/Me.png'
               alt='Zain Abro Img'
+              width={600}
+              height={600}
             />
-            <img
+            <Image
               id='self'
               className='left-20 absolute md:block xs:hidden'
               src='/img/HeroSelf/tool2.png'
-              alt=''
+              alt='design img'
+              width={100}
+              height={100}
             />
-            <img
+            <Image
               id='self'
               className='left-48 top-20 absolute md:block xs:hidden'
               src='/img/HeroSelf/tool3.png'
-              alt=''
+              alt='design img'
+              width={100}
+              height={100}
             />
           </div>
         </div>

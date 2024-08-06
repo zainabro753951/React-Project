@@ -24,6 +24,7 @@ let addressData = [
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 import React, { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 const Address = () => {
@@ -57,7 +58,21 @@ const Address = () => {
               index === 2 ? "md:col-span-2 lg:col-span-1" : ""
             }`}>
             <div className='relative z-40'>
-              <img src={items.img} alt='' />
+              <Image
+                className='w-full h-full'
+                src={items.img}
+                alt={
+                  index === 0
+                    ? "Phone Image"
+                    : "" || index === 1
+                    ? "Email Image"
+                    : "" || index === 3
+                    ? "Address Image"
+                    : ""
+                }
+                width={500}
+                height={500}
+              />
             </div>
             <div className='relative z-40'>
               <h1 className='md:text-2xl font-semibold'>{items.name}</h1>

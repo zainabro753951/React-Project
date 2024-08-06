@@ -2,6 +2,7 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 const Simpleproject = () => {
@@ -22,10 +23,12 @@ const Simpleproject = () => {
     <>
       <div className='md:grid xs:flex flex-col grid-cols-2 gap-5 mt-5'>
         <div id='work' className='row-span-2 w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/Business Website.jpg'
             alt='Business Website Project img'
+            width={1000}
+            height={1000}
           />
           <div
             id='hoverable'
@@ -44,10 +47,12 @@ const Simpleproject = () => {
           </div>
         </div>
         <div id='work' className='w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/Agency Website.jpg'
             alt='Agency Website project img'
+            width={500}
+            height={500}
           />
           <div
             id='hoverable'
@@ -66,10 +71,12 @@ const Simpleproject = () => {
           </div>
         </div>
         <div id='work' className='w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/Restaurent Website.jpg'
             alt='Restaurent Website img'
+            width={500}
+            height={500}
           />
           <div
             id='hoverable'
@@ -88,10 +95,12 @@ const Simpleproject = () => {
           </div>
         </div>
         <div id='work' className='col-span-2 w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/protect harvest.png'
             alt='Protect Harvest Website Project img'
+            width={1000}
+            height={1000}
           />
           <div
             id='hoverable'

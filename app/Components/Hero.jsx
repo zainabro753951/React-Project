@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import TypedComponent from "./TypedComponent";
 import Link from "next/link";
 import gsap from "gsap";
+import Image from "next/image";
 const Hero = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -34,7 +35,6 @@ const Hero = () => {
 
     return () => ctx.revert(); // Clean up the context when the component unmounts
   }, []);
-
   let heroFront = "FrontendDeveloper";
   return (
     <div className='w-full overflow-x-hidden md:min-h-[179vh] bg-cover bg-no-repeat  bg-[url("/img/hero.webp")]'>
@@ -44,28 +44,36 @@ const Hero = () => {
         <div
           id='img-bg'
           className='bg-[#18C6DA] xs:overflow-hidden md:overflow-visible relative rounded-[120px] w-full xs:h-fit md:h-[100vh] lg:h-[120vh]'>
-          <img
+          <Image
             className='md:absolute scale-125 mx-auto w-full z-40 -top-32'
             src='/img/HeroSelf/Zain.png'
             alt='Zain Abro img'
+            width={1000}
+            height={1000}
           />
-          <img
+          <Image
             id='self'
             className='md:absolute xs:hidden md:block -top-60 -right-32'
             src='/img/HeroSelf/tool1`.png'
             alt='img'
+            width={200}
+            height={200}
           />
-          <img
+          <Image
             id='self'
             className='md:absolute xs:hidden md:block bottom-16 -left-10'
             src='/img/HeroSelf/tool2.png'
             alt='img'
+            width={200}
+            height={200}
           />
-          <img
+          <Image
             id='self'
             className='md:absolute xs:hidden md:block top-[150px] left-[400px]'
             src='/img/HeroSelf/tool3.png'
             alt='img'
+            width={100}
+            height={100}
           />
         </div>
         <div
@@ -86,11 +94,13 @@ const Hero = () => {
             id='hero-h1'
             className='flex gap-1 md:text-6xl xs:justify-center md:justify-start sm:text-5xl xs:text-3xl font-bold items-center'>
             Hello!
-            <img
+            <Image
               className='xs:w-[40px] sm:w-[50px] md:w-[100px]'
               id='hand'
               src='/img/hand.svg'
-              alt=''
+              alt='Hand on'
+              width={200}
+              height={200}
             />
             I am
           </h1>

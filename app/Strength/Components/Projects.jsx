@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import Projecttimer from "./Projecttimer";
+import Image from "next/image";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Projects = () => {
   useEffect(() => {
@@ -52,10 +53,12 @@ const Projects = () => {
         <div className='mt-16 grid lg:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-10 px-7'>
           <div id='pro' className='mx-auto'>
             <div>
-              <img
+              <Image
                 className='md:w-[95%] rounded-lg md:relative z-40 h-full mx-auto'
                 src='/img/My Work/Gatsby.jpg'
                 alt='Gatsby Clone project img'
+                width={700}
+                height={700}
               />
             </div>
             <div className='bg-ServiceCard pb-2 rounded-lg w-full md:h-[25vh] flex flex-col justify-end md:relative -top-16'>
@@ -72,6 +75,8 @@ const Projects = () => {
                 className='md:w-[95%] /img/My Work/Gatsby.jpg md:relative rounded-lg z-40 h-full mx-auto'
                 src='/img/My Work/protect harvest.png'
                 alt='Shopo website project img'
+                width={500}
+                height={500}
               />
             </div>
             <div className='bg-ServiceCard pb-2 rounded-lg w-full md:h-[25vh] flex flex-col justify-end md:relative -top-16'>
@@ -84,10 +89,12 @@ const Projects = () => {
           </div>
           <div id='pro' className='mx-auto mb-6 lg:col-span-1 md:col-span-2'>
             <div>
-              <img
+              <Image
                 className='md:w-[95%] md:relative rounded-lg z-40 h-full mx-auto'
                 src='/img/My Work/Edusty.jpg'
                 alt='Edusty website project img'
+                width={500}
+                height={500}
               />
             </div>
             <div className='bg-ServiceCard pb-2 rounded-lg w-full md:h-[25vh] flex flex-col justify-end md:relative -top-16'>

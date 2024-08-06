@@ -2,6 +2,7 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 const Reactapp = () => {
@@ -22,10 +23,12 @@ const Reactapp = () => {
     <>
       <div className='md:grid xs:flex flex-col grid-cols-2 gap-5'>
         <div id='work' className='w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/Shopo.jpg'
             alt='Shopo website project img'
+            width={500}
+            height={500}
           />
           <div
             id='hoverable'
@@ -44,10 +47,12 @@ const Reactapp = () => {
           </div>
         </div>
         <div id='work' className='w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/Edusty.jpg'
             alt='Edusty website project img'
+            width={500}
+            height={500}
           />
           <div
             id='hoverable'
@@ -66,10 +71,12 @@ const Reactapp = () => {
           </div>
         </div>
         <div id='work' className='col-span-2 w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/Gatsby.jpg'
-            alt=''
+            alt='Gatsby work img'
+            width={1000}
+            height={1000}
           />
           <div
             id='hoverable'

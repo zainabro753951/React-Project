@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Skills = () => {
   useEffect(() => {
@@ -47,10 +48,12 @@ const Skills = () => {
             id='EduCard'
             className='skill w-full relative py-2 flex gap-5 border border-gray-500 px-3 rounded-lg'>
             <div className='relative z-40'>
-              <img
+              <Image
                 className='w-[120px]'
                 src='/img/About/Experience/HTML.png'
                 alt='HTML logo'
+                width={500}
+                height={500}
               />
             </div>
             <div className='w-full my-4 relative z-40'>
@@ -69,10 +72,12 @@ const Skills = () => {
             id='EduCard'
             className='skill w-full py-2 relative flex gap-5 border border-gray-500 px-3 rounded-xl'>
             <div className='relative z-40'>
-              <img
+              <Image
                 className='w-[120px]'
                 src='/img/About/Experience/CSS.png'
                 alt='CSS logo'
+                width={500}
+                height={500}
               />
             </div>
             <div className='w-full my-4 relative z-40'>
@@ -91,10 +96,12 @@ const Skills = () => {
             id='EduCard'
             className='skill w-full py-2 relative flex gap-5 border border-gray-500 px-3 rounded-lg'>
             <div className='relative z-40'>
-              <img
+              <Image
                 className='w-[120px]'
                 src='/img/About/Experience/JavaScript.png'
                 alt='JavaScript logo'
+                width={500}
+                height={500}
               />
             </div>
             <div className='w-full my-4 relative z-40'>
@@ -113,10 +120,12 @@ const Skills = () => {
             id='EduCard'
             className='skill w-full py-2 relative flex gap-5 border border-gray-500 px-3 rounded-lg'>
             <div className='relative z-40'>
-              <img
+              <Image
                 className='w-[120px]'
                 src='/img/About/Experience/Reactjs.png'
                 alt='React js logo'
+                width={500}
+                height={500}
               />
             </div>
             <div className='w-full my-4 relative z-40'>
@@ -135,10 +144,12 @@ const Skills = () => {
             id='EduCard'
             className='skill w-full relative py-2 flex gap-5 border border-gray-500 px-3 rounded-lg'>
             <div className='relative z-40 w-[120px] bg-Skills rounded-full border-[0.5px] border-[#274876] flex items-center justify-center'>
-              <img
+              <Image
                 className='w-[65px]'
                 src='/img/About/Experience/github.png'
                 alt='HTML logo'
+                width={500}
+                height={500}
               />
             </div>
             <div className='w-full my-4 relative z-40'>
@@ -157,10 +168,12 @@ const Skills = () => {
             id='EduCard'
             className='skill w-full relative py-2 flex gap-5 border border-gray-500 px-3 rounded-lg'>
             <div className='relative z-40 w-[120px] bg-Skills rounded-full border-[0.5px] border-[#274876] flex items-center justify-center'>
-              <img
+              <Image
                 className='w-[65px]'
                 src='/img/About/Experience/gsap.png'
                 alt='HTML logo'
+                width={500}
+                height={500}
               />
             </div>
             <div className='w-full my-4 relative z-40'>

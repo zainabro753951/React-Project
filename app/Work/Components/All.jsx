@@ -2,6 +2,7 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 
@@ -23,10 +24,12 @@ const All = () => {
     <>
       <div className='md:grid xs:flex flex-col grid-cols-2 gap-5'>
         <div id='work' className='w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/Shopo.jpg'
             alt='Shopo Website project img'
+            width={700}
+            height={700}
           />
           <div
             id='hoverable'
@@ -45,10 +48,12 @@ const All = () => {
           </div>
         </div>
         <div id='work' className='w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/Edusty.jpg'
             alt='Edusty website project img'
+            width={700}
+            height={700}
           />
           <div
             id='hoverable'
@@ -67,10 +72,12 @@ const All = () => {
           </div>
         </div>
         <div id='work' className='col-span-2 w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/Gatsby.jpg'
             alt='Gatsby clone project img'
+            width={1500}
+            height={1500}
           />
           <div
             id='hoverable'
@@ -91,10 +98,12 @@ const All = () => {
       </div>
       <div className='md:grid xs:flex flex-col md:grid-cols-2 gap-5 mt-5'>
         <div id='work' className='row-span-2 w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/Business Website.jpg'
             alt='Business Website project img'
+            width={1000}
+            height={1000}
           />
           <div
             id='hoverable'
@@ -111,10 +120,12 @@ const All = () => {
           </div>
         </div>
         <div id='work' className='w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/Agency Website.jpg'
             alt='Agency Website project img'
+            width={700}
+            height={700}
           />
           <div
             id='hoverable'
@@ -131,10 +142,12 @@ const All = () => {
           </div>
         </div>
         <div id='work' className='w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/Restaurent Website.jpg'
             alt='Restaurent Website project img'
+            width={700}
+            height={700}
           />
           <div
             id='hoverable'
@@ -151,10 +164,12 @@ const All = () => {
           </div>
         </div>
         <div id='work' className='col-span-2 w-full h-full relative'>
-          <img
+          <Image
             className='w-full h-full object-cover rounded-xl'
             src='/img/My Work/protect harvest.png'
             alt='Protect Harvest Website Project img'
+            width={1500}
+            height={1500}
           />
           <div
             id='hoverable'

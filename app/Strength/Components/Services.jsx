@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import ServicesCard from "./ServicesCard";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 
 const Services = () => {
   useEffect(() => {
@@ -43,7 +44,13 @@ const Services = () => {
               affordable website design cost. I also specialize as a Shopify Web
               Developer, crafting eCommerce solutions that drive sales.
             </p>
-            <img className='mt-10' src='/img/Strength/do_img.webp' alt='' />
+            <Image
+              className='mt-10'
+              width={500}
+              height={500}
+              src='/img/Strength/do_img.webp'
+              alt=''
+            />
           </div>
         </div>
         <div className='col-span-2 grid md:grid-cols-2 gap-7'>

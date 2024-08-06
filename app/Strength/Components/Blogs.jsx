@@ -29,6 +29,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Blogs = () => {
   useEffect(() => {
@@ -60,10 +61,12 @@ const Blogs = () => {
           <div
             id='blog'
             className='w-full bg-ServiceCard flex flex-col h-full relative rounded-xl'>
-            <img
+            <Image
               className='w-full h-[40%] object-cover rounded-t-xl'
               src={items.img}
               alt='Web Development Blog img'
+              width={500}
+              height={500}
             />
             <div className='p-3 flex flex-col justify-between gap-1 w-full h-full'>
               <div>

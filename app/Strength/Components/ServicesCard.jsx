@@ -32,6 +32,7 @@ let serviceCardData = [
 ];
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Image from "next/image";
 import React, { useEffect } from "react";
 gsap.registerPlugin(useGSAP);
 const ServicesCard = () => {
@@ -55,7 +56,13 @@ const ServicesCard = () => {
         id='EduCard'
         className='service bg-ServiceCard relative rounded-xl  py-5 px-2 '>
         <div className='flex justify-center relative z-40 text-center items-center flex-col'>
-          <img className='w-[100px]' src={items.img} alt={items.alt} />
+          <Image
+            className='w-[100px]'
+            width={500}
+            height={500}
+            src={items.img}
+            alt={items.alt}
+          />
           <h1 className='md:text-2xl py-2 font-semibold'>{items.name}</h1>
           <p className='font-light'>{items.discription}</p>
         </div>

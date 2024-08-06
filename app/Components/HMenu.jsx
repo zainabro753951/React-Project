@@ -1,6 +1,7 @@
 /** @format */
 
 // MenuIcon.js
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -74,40 +75,48 @@ const MenuIcon = () => {
                   href='https://web.facebook.com/profile.php?id=61554257380915'
                   target='_blank'
                   rel='noopener noreferrer'>
-                  <img
+                  <Image
                     className='md:w-[60px] xs:w-[50px]'
                     src='/img/Headerlinks/fb.svg'
                     alt='Facebook icon'
+                    width={500}
+                    height={500}
                   />
                 </a>
                 <a
                   href='https://www.linkedin.com/in/zain-abro-449399308/'
                   target='_blank'
                   rel='noopener noreferrer'>
-                  <img
+                  <Image
                     className='md:w-[60px] xs:w-[50px]'
                     src='/img/Headerlinks/in.svg'
                     alt='Linkedin icon'
+                    width={500}
+                    height={500}
                   />
                 </a>
                 <a
                   href='https://github.com/zainabro753951'
                   target='_blank'
                   rel='noopener noreferrer'>
-                  <img
+                  <Image
                     className='md:w-[60px] xs:w-[50px] rounded-full'
                     src='/img/About/Experience/github2.jpg'
                     alt='GitHub Icon'
+                    width={500}
+                    height={500}
                   />
                 </a>
                 <a
                   href='https://www.instagram.com/zain_abro886/'
                   target='_blank'
                   rel='noopener noreferrer'>
-                  <img
+                  <Image
                     className='md:w-[60px] xs:w-[50px]'
                     src='/img/Headerlinks/Instagram.webp'
                     alt='Instagram icon'
+                    width={500}
+                    height={500}
                   />
                 </a>
               </div>
