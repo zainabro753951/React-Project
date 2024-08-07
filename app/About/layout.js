@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           property='og:image'
-          content='/img/og img/frontend_developer.png'
+          content='/img/og img/frontend_developer.jpeg'
         />
         <meta
           property='og:description'
