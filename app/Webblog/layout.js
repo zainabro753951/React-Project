@@ -23,6 +23,10 @@ export default function RootLayout({ children }) {
           property='og:description'
           content="Dive into the world of frontend development with Zain Abro's blog. Discover tutorials, best practices, and the latest web development trends, covering HTML, CSS, JavaScript, React.js, and more."
         />
+        <meta
+          property='og:image'
+          content='/public/img/og img/frontend_developer.png'
+        />
       </head>
       <body suppressHydrationWarning>{children}</body>
     </html>

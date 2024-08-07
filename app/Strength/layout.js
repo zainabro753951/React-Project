@@ -23,6 +23,10 @@ export default function RootLayout({ children }) {
           property='og:description'
           content="Explore Zain Abro's strengths in frontend development, including proficiency in HTML, CSS, JavaScript, React.js, and Tailwind CSS. Understand the skills that contribute to creating exceptional web experiences and solutions."
         />
+        <meta
+          property='og:image'
+          content='/public/img/og img/frontend_developer.png'
+        />
       </head>
       <body suppressHydrationWarning>{children}</body>
     </html>

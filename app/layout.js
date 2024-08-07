@@ -33,9 +33,12 @@ export default function RootLayout({ children }) {
           property='og:description'
           content='Discover the portfolio of Zain Abro, a talented web developer specializing in React and modern web technologies. Check out innovative projects and professional services that bring ideas to life.'
         />
-        <meta property='og:image' content='img/og img/ZainAbro.png' />
+        <meta
+          property='og:image'
+          content='/public/img/og img/frontend_developer.png'
+        />
         <meta property='og:url' content='https://zainabro.netlify.app/' />
-        <link rel='icon' href='/img/ZainAbro.png' />
+        <link rel='icon' href='/public/img/ZainAbro.png' />
       </head>
       <body suppressHydrationWarning>{children}</body>
     </html>

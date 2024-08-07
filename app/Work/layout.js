@@ -27,6 +27,10 @@ export default function RootLayout({ children }) {
           property='og:description'
           content="Check out Zain Abro's work portfolio featuring frontend development projects. From HTML and CSS to JavaScript and React.js, explore a collection of professional web design and development work that highlights technical skills and creativity."
         />
+        <meta
+          property='og:image'
+          content='/public/img/og img/frontend_developer.png'
+        />
       </head>
       <body suppressHydrationWarning>{children}</body>
     </html>

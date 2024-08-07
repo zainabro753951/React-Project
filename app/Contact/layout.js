@@ -24,6 +24,10 @@ export default function RootLayout({ children }) {
           property='og:description'
           content='Reach out to [Zain Abro for frontend development and web design services. Use the contact form to inquire about project collaborations, freelance opportunities, or any questions related to web development.'
         />
+        <meta
+          property='og:image'
+          content='/public/img/og img/frontend_developer.png'
+        />
       </head>
       <body suppressHydrationWarning>{children}</body>
     </html>

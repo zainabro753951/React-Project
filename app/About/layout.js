@@ -21,6 +21,10 @@ export default function RootLayout({ children }) {
           content='About Zain Abro | Frontend Developer & Web Designer'
         />
         <meta
+          property='og:image'
+          content='/public/img/og img/frontend_developer.png'
+        />
+        <meta
           property='og:description'
           content="Get to know Zain Abro, a professional frontend developer and web designer specializing in modern web technologies like HTML, CSS, JavaScript, React.js, and Tailwind CSS. Explore Zain Abro's background, experience, and key projects."
         />
