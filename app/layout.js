@@ -34,10 +34,10 @@ export default function RootLayout({ children }) {
         />
         <meta
           property='og:image'
-          content='/public/img/og img/frontend_developer.png'
+          content='/img/og img/frontend_developer.png'
         />
         <meta property='og:url' content='https://zainabro.netlify.app/' />
-        <link rel='icon' href='/public/img/ZainAbro.png' />
+        <link rel='icon' href='/img/ZainAbro.png' />
       </head>
       <body suppressHydrationWarning>{children}</body>
     </html>
