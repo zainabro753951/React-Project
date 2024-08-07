@@ -21,7 +21,6 @@ export default function RootLayout({ children }) {
           name='viewport'
           content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
         />
-        <meta property='og:title' content='My Portfolio' />
         <meta
           name='keywords'
           content='Web Developer, React Developer, Frontend Development, JavaScript Projects, Creative Solutions'></meta>
