@@ -202,6 +202,7 @@
   border-radius: 9999px;
   background-color: #3eaeff;
 }
+<<<<<<< HEAD
 #feel7::before {
   content: "";
   width: 95%;
@@ -242,3 +243,8 @@
   display: block;
   width: 100%;
 }
+=======
+.Show {
+  height: 100%;
+}
+>>>>>>> 699f0447ad56cefb7b985bda99fa15097be21b62

@@ -4,7 +4,10 @@ import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> 699f0447ad56cefb7b985bda99fa15097be21b62
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Wheader = () => {
   const blog_h1 = useRef();
@@ -23,12 +26,19 @@ const Wheader = () => {
   const [name, setname] = useState("My Journey of Web Development Blog");
   return (
     <div className='w-full h-[60vh] relative font-Barlow not-italic'>
+<<<<<<< HEAD
       <Image
       width={500}
       height={500}
         className='w-full h-full object-cover  absolute'
         src='/img/Strength/Blogs/webblog.jpeg'
         alt='HTMl CSS and JavaScript blog header image'
+=======
+      <img
+        className='w-full h-full object-cover  absolute'
+        src='/img/Strength/Blogs/webblog.jpeg'
+        alt=''
+>>>>>>> 699f0447ad56cefb7b985bda99fa15097be21b62
       />
       <div className='absolute text-white bg-Blog w-full flex items-center md:px-20 h-full top-0 left-0'>
         <h1 className='md:text-5xl xs:text-3xl font-bold md:w-[60%] text-center'>

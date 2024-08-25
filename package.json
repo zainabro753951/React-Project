@@ -20,10 +20,14 @@
     "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18",
+<<<<<<< HEAD
     "react-spinners": "^0.14.1",
     "react-toastify": "^10.0.5",
     "swiper": "^11.1.10",
     "swipper-js": "^1.0.1",
+=======
+    "react-toastify": "^10.0.5",
+>>>>>>> 699f0447ad56cefb7b985bda99fa15097be21b62
     "typed.js": "^2.1.0"
   },
   "devDependencies": {

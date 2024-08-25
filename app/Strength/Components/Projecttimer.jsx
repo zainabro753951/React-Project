@@ -25,7 +25,11 @@ const Projecttimer = ({ uploadDate }) => {
       );
       if (minutes <= 60) {
         return `${minutes} minutes ago`;
+<<<<<<< HEAD
       } else if (hours <= minutes) {
+=======
+      } else if (hours <= 60) {
+>>>>>>> 699f0447ad56cefb7b985bda99fa15097be21b62
         return `${hours} hours ago`;
       } else if (days <= 30.44) {
         return `${days} days ago`;

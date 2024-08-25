@@ -52,6 +52,11 @@ const Blogs = () => {
     return () => ctx.revert(); // Clean up the context when the component unmounts
   }, []);
   const blog1 = "2024-08-01T12:00:00";
+<<<<<<< HEAD
+=======
+  const blog2 = "2024-08-01T12:00:00";
+  const blog3 = "2024-08-01T12:00:00";
+>>>>>>> 699f0447ad56cefb7b985bda99fa15097be21b62
   return (
     <>
       {BlogsData.map((items, index) => {
