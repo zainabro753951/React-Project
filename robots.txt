@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /About
+Allow: /Work
+Allow: /Strength
+Allow: /Contact
+Allow: /Webblog
+Sitemap: https://zainabro.netlify.app/sitemap.xml
