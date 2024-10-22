@@ -47,7 +47,7 @@ const Hero = () => {
           className="bg-[#18C6DA] xs:overflow-hidden md:overflow-visible relative rounded-[120px] w-full xs:h-fit md:h-[100vh] lg:h-[120vh]"
         >
           <Image
-            className="md:absolute scale-125 mx-auto w-full z-40 -top-32"
+            className="md:absolute scale-100 mx-auto w-full z-40 -top-32"
             src="/img/HeroSelf/Zain.png"
             alt="Zain Abro img"
             width={1000}
