@@ -1,0 +1,207 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-10px, 7px);
+}
+
+.change .bar2 {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-10px, -7px);
+}
+
+#back-Img::before {
+  content: "";
+  position: absolute;
+  background-image: url("https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/banner-shape.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: cv_ud 5s ease-in-out infinite alternate;
+  background-position: center;
+}
+@keyframes cv_ud {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5%);
+  }
+}
+#self {
+  animation: cv_ud 3s ease-in-out infinite alternate;
+}
+
+#hand {
+  transform-origin: 70% 70%;
+  animation: wave-animation 2.5s infinite;
+  max-width: 20%;
+}
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+#about::before {
+  content: "";
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  background-image: url("/img/About/Abefore.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: cv_ud 5s ease-in-out infinite alternate;
+}
+#Edu::before {
+  content: "";
+  width: 20%;
+  height: 3px;
+  background-color: #3eaeff;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+}
+#EduCard::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  background: linear-gradient(to bottom, #18334ed6, #18334e28);
+  top: 0;
+  left: 0;
+  transition: all 0.9s;
+  border-radius: 8px;
+}
+
+#EduCard:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.background {
+  background-color: #101727;
+  background-image: url("/img/About/Experience/exp_bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background::before {
+  content: "";
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  background-image: url("/img/About/Experience/exp_before.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: cv_ud 5s ease-in-out infinite alternate;
+}
+#ExpCard::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+  background: linear-gradient(to bottom, #28415a, #31425455);
+  transition: all 0.6s;
+}
+#ExpCard:hover::before {
+  width: 100%;
+  height: 100%;
+}
+#work:hover #hoverable {
+  height: 100%;
+}
+#feel1::before {
+  content: "";
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  background-color: #3eaeff;
+}
+#feel2::before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  background-color: #3eaeff;
+}
+#feel3::before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  background-color: #3eaeff;
+}
+#feel4::before {
+  content: "";
+  width: 68%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  background-color: #3eaeff;
+}
+#feel5::before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  background-color: #3eaeff;
+}
+#feel6::before {
+  content: "";
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  background-color: #3eaeff;
+}
+.Show {
+  height: 100%;
+}
